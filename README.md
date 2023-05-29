@@ -10,7 +10,7 @@
 
 ## gitlab
 
-那我們要怎麼把 `.tfstate` 給存到 gitlab 呢？首先跟之前一樣，先新增 `provider.tf` 來放供應商來源以及版本，以及 `main.tf` 來放 gce 相關設定，最後還要多一個 `backend.tf` 來放我們要儲存的位置設定，如下：(同步到 GitHub 需要程式碼的可以前往查看)
+那我們要怎麼把 `.tfstate` 給存到 gitlab 呢？首先跟之前一樣，先新增 `provider.tf` 來放供應商來源以及版本，以及 `main.tf` 來放 gce 相關設定，最後還要多一個 `backend.tf` 來放我們要儲存的位置設定，如下：([同步到 GitHub 需要程式碼的可以前往查看](https://github.com/880831ian/terraform-tfstate))
 
  (這次範例會使用 gce，此項會需要 gitlab 先啟用 Infrastructure 功能以及建立自己的 gitlab token)
 
@@ -90,7 +90,7 @@ terraform {
 
 <br>
 
-{{< image src="/images/terraform-tfstate/1.png"  width="700" caption="init 初始化後，會將後端資訊也存到 .terraform 資料夾" src_s="/images/terraform-tfstate/1.png" src_l="/images/terraform-tfstate/1.png" >}}
+![圖片](https://raw.githubusercontent.com/880831ian/terraform-tfstate/master/images/1.png)
 
 <br>
 
@@ -98,7 +98,7 @@ terraform {
 
 <br>
 
-{{< image src="/images/terraform-tfstate/2.png"  width="700" caption="apply 完，沒有在本地產生 .tfstate 檔案" src_s="/images/terraform-tfstate/2.png" src_l="/images/terraform-tfstate/2.png" >}}
+![圖片](https://raw.githubusercontent.com/880831ian/terraform-tfstate/master/images/2.png)
 
 <br>
 
@@ -106,7 +106,7 @@ terraform {
 
 <br>
 
-{{< image src="/images/terraform-tfstate/3.png"  width="600" caption="gitlab/Infrastructure/Terraform" src_s="/images/terraform-tfstate/3.png" src_l="/images/terraform-tfstate/3.png" >}}
+![圖片](https://raw.githubusercontent.com/880831ian/terraform-tfstate/master/images/3.png)
 
 <br>
 
@@ -114,7 +114,7 @@ terraform {
 
 <br>
 
-{{< image src="/images/terraform-tfstate/4.png"  width="1000" caption="gitlab terraform tfstate 網頁" src_s="/images/terraform-tfstate/4.png" src_l="/images/terraform-tfstate/4.png" >}}
+![圖片](https://raw.githubusercontent.com/880831ian/terraform-tfstate/master/images/4.png)
 
 <br>
 
@@ -122,7 +122,7 @@ terraform {
 
 <br>
 
-{{< image src="/images/terraform-tfstate/5.png"  width="500" caption="gitlab terraform tfstate 功能說明" src_s="/images/terraform-tfstate/5.png" src_l="/images/terraform-tfstate/5.png" >}}
+![圖片](https://raw.githubusercontent.com/880831ian/terraform-tfstate/master/images/5.png)
 
 
 <br>
@@ -139,7 +139,7 @@ terraform {
 
 <br>
 
-{{< image src="/images/terraform-tfstate/6.png"  width="1000" caption="GitLab Lock 鎖住" src_s="/images/terraform-tfstate/6.png" src_l="/images/terraform-tfstate/6.png" >}}
+![圖片](https://raw.githubusercontent.com/880831ian/terraform-tfstate/master/images/6.png)
 
 <br>
 
@@ -147,7 +147,7 @@ terraform {
 
 <br>
 
-{{< image src="/images/terraform-tfstate/7.png"  width="700" caption="在 Lock 下，其他人沒辦法去 plan or apply" src_s="/images/terraform-tfstate/7.png" src_l="/images/terraform-tfstate/7.png" >}}
+![圖片](https://raw.githubusercontent.com/880831ian/terraform-tfstate/master/images/7.png)
 
 <br>
 
@@ -188,7 +188,7 @@ terraform {
 
 <br>
 
-{{< image src="/images/terraform-tfstate/8.png"  width="700" caption="產生 defaulte.tfstate" src_s="/images/terraform-tfstate/8.png" src_l="/images/terraform-tfstate/8.png" >}}
+![圖片](https://raw.githubusercontent.com/880831ian/terraform-tfstate/master/images/8.png)
 
 <br>
 
@@ -198,7 +198,7 @@ terraform {
 
 <br>
 
-{{< image src="/images/terraform-tfstate/9.png"  width="700" caption="gcs Lock 會出現 .tflock 檔案" src_s="/images/terraform-tfstate/9.png" src_l="/images/terraform-tfstate/9.png" >}}
+![圖片](https://raw.githubusercontent.com/880831ian/terraform-tfstate/master/images/9.png)
 
 <br>
 
@@ -206,7 +206,7 @@ terraform {
 
 <br>
 
-{{< image src="/images/terraform-tfstate/10.png"  width="700" caption="gcs Lock 其他人不能操作" src_s="/images/terraform-tfstate/10.png" src_l="/images/terraform-tfstate/10.png" >}}
+![圖片](https://raw.githubusercontent.com/880831ian/terraform-tfstate/master/images/10.png)
 
 <br>
 
